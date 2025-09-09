@@ -16,6 +16,11 @@ public class ReciclerAdapter extends RecyclerView.Adapter<ReciclerAdapter.ViewHo
     private ArrayList<RecyclerList> recyclelist;
     private Context context;
 
+    public ReciclerAdapter(ArrayList<RecyclerList> recyclelist, Context context) {
+        this.recyclelist = recyclelist;
+        this.context = context;
+    }
+
     @NonNull
     @Override
     public ReciclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -25,7 +30,8 @@ public class ReciclerAdapter extends RecyclerView.Adapter<ReciclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ReciclerAdapter.ViewHolder holder, int position) {
-
+        holder.img.setImageResource(recyclelist.get(position).getImg());
+        holder.txt.setText(recyclelist.get(position).getText());
     }
 
     @Override

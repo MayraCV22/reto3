@@ -15,8 +15,9 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_height="150dp"
+                android:padding="20dp"
+                tools:srcCompat="@drawable/adidas" />
 
             <TextView
                 android:id="@+id/textView2"
